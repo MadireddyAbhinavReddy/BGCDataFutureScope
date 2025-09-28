@@ -1,12 +1,15 @@
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
-
+st.set_page_config(layout="wide")
+# copernicus_url = "https://data.marine.copernicus.eu/viewer/expert?view=viewer&crs=epsg%3A4326&t=1758931200000&z=0&center=38.71555331294595%2C4.770636901121344&zoom=9.93811092921462&layers=H4sIAJZE2WgAA7XT3W6CMBiA4XvpsYzys2XhDN2mJkSNeGKW5UulFUgKNW3dxoz3vqI4mTObWeIh8NE_b5o_b5DQGZM9ISRVKNhsO4iTiskhRQHqR_NuGEE4CqN5PIyfxtPHXhjPoNvvAcYOYPfeTgpWKCgEhZQLWKSJtVpqIOUyAXzj3lKWwsR5sApwses5jp1kHHXQx7Ck7B0FuINyNcgpZSUKtFwz81zvDBybKS7SOCGcoWBJuDLfeJ5mui.FerXz1WttO.9KmAzmTYJ.krDKKsusp4k4VOB771uGj_.s.USrxKlT9nTnAnrz.1X0yVr_RleMwBvRTMIr4yLJdWW8SlecTYjUecKZcezPYvc2FrwOazoOve6x172g98ym12g.7Z45g1Z4_7y8o9.76f.DFhuH8e0skQ_j6QywgwH7XkMSC2Uppb9YpdTA.dZNwJ5NSsIrxSiYwRbMP8L8M7CXTzqV8iuzAwAA&basemap=dark"
+copernicus_url="https://data.marine.copernicus.eu/viewer/expert?view=viewer&crs=epsg%3A4326&t=1758931200000&z=0&center=0%2C0&zoom=9.93811092921462&layers=H4sIAJRI2WgAA53QXWuDMBSA4f_SazuPmo3inXWbCtKW6k0Z42BN.IBoxFiYK.3vU9ttsg0GvQw5JM97Xk5EdgVvXSlbpoh9OmtEJD1vA0Zs4oWblROis3bCfRREz5vdk_tEMa48FwEMBHOppxWvFFaSYS4kHvJ00WQdJnWWItyZ94znuDUeFxWaYFqGoaeFIBp5D2rG34gNGimVXzLGa2J37ZEP5.FnFDBMCZlHaSI4sbNEqOFOlHnRea08NpNvfOus3ZSw9ffXBPojoSn6Tz4srckfG.4lgMKDruTMb40BF7D1G.yPLRocg2_yhBTXuxjBAARqXUnyoBZKdV_suu1Q0Nk_wdKTOhG94gyHwRmMfsPoH7DXD3SlCjX5AQAA&basemap=dark"
+st.components.v1.iframe(copernicus_url, height=600, scrolling=True)
 def show_future_scope_page():
     """
     Creates and displays the future scope page for the Streamlit application.
     """
-    st.set_page_config(layout="wide")
+    # st.set_page_config(layout="wide")
 
     st.title("🛰️ Future Scope: Integrating Satellite Data")
     st.markdown("""
